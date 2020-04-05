@@ -15,8 +15,8 @@ soup = BeautifulSoup(response.text,  "html.parser")
 #getting numbers and the report date using beautifulsoup
 tds = soup.find_all("td")
 
-today_cases = tds[2].text
-total_cases = tds[1].text
+today_cases = tds[1].text
+total_cases = tds[0].text
 
 report_date = soup.find_all("p",class_="georgia-italic")[0].text.split(",")[1].strip(".")
 
